@@ -1,6 +1,7 @@
-groq
-python-dotenv
-streamlit
 flask
+gunicorn
+groq
+python-dotenv   # optional for local testing
+
 
 
