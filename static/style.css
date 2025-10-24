@@ -1,0 +1,115 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #ece9e6, #ffffff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.chat-container {
+    width: 450px;
+    height: 600px;
+    background: #f9f9f9;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 15px;
+    overflow: hidden; /* Keeps the rounded corners clean */
+}
+
+/* --- THIS IS THE NEW STYLE BLOCK YOU ASKED FOR --- */
+.chat-header {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 5px; /* Adds space between header and chat-box */
+}
+/* --- END OF NEW STYLE BLOCK --- */
+
+#chat-box {
+    flex: 1; /* This makes the chat box fill all available space */
+    overflow-y: auto; /* Adds scrolling ONLY to the chat box */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Adds a small space between messages */
+}
+
+/* Base style for all messages */
+.message {
+    padding: 10px 15px;
+    border-radius: 20px;
+    max-width: 80%;
+    word-wrap: break-word;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    font-size: 14px;
+}
+
+/* User message bubble */
+.user {
+    background-color: #4da6ff;
+    color: white;
+    margin-left: auto; /* Aligns to the right */
+    text-align: right;
+}
+
+/* Bot message bubble */
+.bot {
+    background-color: #d9f0d9;
+    color: #333;
+    margin-right: auto; /* Aligns to the left */
+    text-align: left;
+}
+
+/* Timestamp style */
+.timestamp {
+    display: block;
+    font-size: 10px;
+    color: #888;
+    margin-top: 3px;
+}
+.user .timestamp {
+    color: #f0f0f0; /* Lighter timestamp for the dark bubble */
+}
+.bot .timestamp {
+    color: #555; /* Darker timestamp for the light bubble */
+}
+
+
+/* Input bar styling */
+#input-bar {
+    display: flex;
+    margin-top: 10px; /* Space between chat box and input */
+    gap: 10px;
+}
+
+#user-input {
+    flex: 1; /* Input takes up remaining space */
+    padding: 12px 15px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 14px;
+}
+
+button {
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: none;
+    background: #28a745; /* Green send button */
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #218838; /* Darker green on hover */
+}
